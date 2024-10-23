@@ -43,13 +43,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $mail->isSMTP();
             $mail->Host = 'smtp.gmail.com'; // Use your email service provider's SMTP server
             $mail->SMTPAuth = true;
-            $mail->Username = 'newlifeksv@gmail.com'; // Your Gmail or SMTP username
-            $mail->Password = 'pxuo fjyj dhib wtqj'; // Your Gmail or SMTP password
+            $mail->Username = 'your@gmail.com'; // Your Gmail or SMTP username
+            $mail->Password = 'iwuewe woefho sf'; // Your Gmail or SMTP password
             $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
             $mail->Port = 587;
 
             // Email details
-            $mail->setFrom('no-reply@yourdomain.com', 'New Life');
+            $mail->setFrom('no-reply@yourdomain.com', 'Name');
             $mail->addAddress($email); // Add recipient email address
             $mail->Subject = "Password Reset Request";
             $mail->isHTML(true);
