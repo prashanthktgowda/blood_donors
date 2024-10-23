@@ -17,9 +17,9 @@ include 'footer_header.html'; // Include the header file
         <h1>Welcome to New Life</h1>
         <ul>
             <li><strong>Organization:</strong> New Life!</li>
-            <li><strong>Address:</strong> KSV Nilaya, Millers road,Vasanthnagar,Bengaluru-560052</li>
-            <li><strong>Email:</strong> <a href="mailto:newlifeksv@gmail.com">newlifeksv@gmail.com</a></li>
-            <li><strong>Phone Number:</strong> +91 8762431756</li>
+            <li><strong>Address:</strong> your_address</li>
+            <li><strong>Email:</strong> <a href="email_id">email_id</a></li>
+            <li><strong>Phone Number:</strong> +91 1234567890</li>
         </ul>
     </section>
 </main>
