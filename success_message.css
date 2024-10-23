@@ -1,0 +1,165 @@
+/* General body styling for mobile */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f7; /* Light background color */
+    color: #1c1c1e; /* Default text color */
+}
+
+/* Main container styling */
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 15px; /* Padding adjusted for mobile */
+    min-height: calc(100vh - 160px); /* Space for header and footer */
+}
+
+/* Premium container styling */
+.container {
+    width: 100%;
+    max-width: 400px; /* Max width for the container */
+    background-color: #ffffff; /* White background */
+    padding: 40px;
+    border-radius: 15px; /* Rounded corners for premium look */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    text-align: center; /* Centered text */
+    margin-top: 2% ; /* Centering the container */
+    margin-bottom: 2% ; /* Centering the container */
+}
+
+/* Title styling */
+.container h1 {
+    font-size: 24px; /* Font size for the title */
+    font-weight: 600; /* Bold font weight */
+    color: #1c1c1e; /* Dark text color */
+    margin-bottom: 20px; /* Margin below the title */
+}
+
+/* Input fields */
+input[type="email"],
+input[type="text"],
+textarea {
+    width: 100%; /* Full width inputs */
+    padding: 14px 16px; /* Input padding */
+    font-size: 16px; /* Font size */
+    margin-bottom: 20px; /* Margin below inputs */
+    border: 1px solid #e5e5ea; /* Light border */
+    border-radius: 12px; /* Rounded corners */
+    background-color: #f9f9f9; /* Light background */
+    transition: all 0.3s ease; /* Smooth transition */
+}
+
+/* Focus effect for input fields */
+input[type="email"]:focus,
+input[type="text"]:focus,
+textarea:focus {
+    border-color: #007aff; /* Blue border on focus */
+    background-color: #fff; /* White background on focus */
+    outline: none; /* Remove default outline */
+}
+
+/* Button styling */
+.form-button {
+    background-color: #007bff; /* Primary button color */
+    color: white; /* Text color for button */
+    padding: 12px 20px; /* Button padding */
+    border: none; /* No border */
+    border-radius: 10px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 16px; /* Button font size */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transition */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow for button */
+}
+
+/* Hover effect for button */
+.form-button:hover {
+    background-color: #2e5b8b; /* Darker button color on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+/* Focus effect for button */
+.form-button:focus {
+    outline: none; /* Remove default outline */
+    box-shadow: 0 0 0 3px rgba(40, 167, 69, 0.5); /* Shadow on focus */
+}
+
+/* Dark Mode styles for button */
+body.dark-mode .form-button {
+    background-color: #17a2b8; /* Dark mode button color */
+    color: #e0e0e0; /* Light text color */
+}
+
+body.dark-mode .form-button:hover {
+    background-color: #138496; /* Darker on hover */
+}
+
+/* Link styles */
+a {
+    color: #007aff; /* Link color */
+    text-decoration: none; /* No underline */
+}
+
+a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Error message styling */
+.error-message {
+    background-color: #ff3b30; /* Error background color */
+    color: #fff; /* White text color */
+    padding: 10px; /* Padding */
+    border-radius: 8px; /* Rounded corners */
+    margin-bottom: 20px; /* Margin below error message */
+    text-align: left; /* Left-aligned text */
+}
+
+/* Dark mode styles */
+body.dark-mode {
+    background-color: #1c1c1e; /* Dark background */
+    color: #f2f2f7; /* Light text color */
+}
+
+body.dark-mode .container {
+    background-color: #2c2c2e; /* Dark container background */
+}
+
+body.dark-mode input {
+    background-color: #3a3a3c; /* Dark input background */
+    color: #f2f2f7; /* Light text color in inputs */
+    border: 1px solid #48484a; /* Darker border */
+}
+
+body.dark-mode .error-message {
+    background-color: #ff453a; /* Dark mode error background */
+}
+
+/* Media Queries for small screens */
+@media (max-width: 768px) {
+    main {
+        padding: 20px; /* Padding for small screens */
+        min-height: calc(100vh - 160px); /* Gap for header and footer */
+    }
+
+    .container {
+        padding: 30px 20px; /* Adjusted padding for small screens */
+        margin: 10px 0; /* Added margin for top and bottom gap */
+    }
+
+    input[type="email"],
+    input[type="text"],
+    textarea {
+        padding: 12px 16px; /* Adjusted padding for inputs */
+        font-size: 14px; /* Smaller font size */
+    }
+
+    .form-button {
+        font-size: 14px; /* Smaller button font size */
+        padding: 10px 16px; /* Adjusted button padding */
+    }
+
+    .container h1 {
+        font-size: 20px; /* Smaller title font size */
+    }
+}

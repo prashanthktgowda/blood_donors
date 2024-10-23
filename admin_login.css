@@ -1,0 +1,113 @@
+/* General Styles */
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #f0f0f5; /* Light background for a modern feel */
+    margin: 0;
+    padding: 0;
+}
+
+/* Main container styling */
+.container {
+    max-width: 400px;
+    margin: 100px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Header styling */
+h1 {
+    color: #333333;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Input field styling */
+input[type="email"], input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+input[type="email"]:focus, input[type="password"]:focus {
+    border-color: #007aff; /* iOS blue */
+    box-shadow: 0 0 5px rgba(0, 122, 255, 0.2);
+}
+
+/* Button styling */
+/* Search Button Styles */
+.form-button {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Hover Effect */
+.form-button:hover {
+    background-color: #2e5b8b;
+    transform: translateY(-2px);
+}
+
+/* Error message styling */
+.error-message {
+    color: #f44336; /* Error red */
+    background-color: #ffebee;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+/* Forgot password link */
+p {
+    margin-top: 20px;
+}
+
+p a {
+    color: #007aff; /* iOS link color */
+    text-decoration: none;
+}
+
+p a:hover {
+    text-decoration: underline;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+    background-color: #1c1c1c; /* Dark background for dark mode */
+    color: #ffffff; /* White text */
+}
+
+body.dark-mode .container {
+    background-color: #333333; /* Darker container for dark mode */
+}
+
+body.dark-mode input[type="email"], body.dark-mode input[type="password"] {
+    background-color: #444444; /* Dark input fields */
+    color: #ffffff; /* White text in inputs */
+    border-color: #555555; /* Dark border */
+}
+
+body.dark-mode .btn {
+    background-color: #007aff; /* Maintain iOS blue */
+}
+
+body.dark-mode .btn :hover {
+    background-color: #005bb5; /* Maintain hover color */
+}
+
+body.dark-mode .error-message {
+    background-color: #c62828; /* Darker error background */
+    color: #ffffff; /* White text */
+}

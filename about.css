@@ -1,0 +1,127 @@
+/* General Reset for the main content */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and Main Container Styles */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: #ffffff; /* Default light background */
+    color: #333; /* Default dark text color */
+    line-height: 1.6; /* Improved line spacing */
+}
+
+/* Main container styles */
+.container {
+    max-width: 1200px; /* Maximum width for larger screens */
+    margin: 20px auto; /* Centering the container */
+    padding: 20px; /* Padding around the content */
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow for premium feel */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for dark mode */
+}
+
+/* Headings */
+h1 {
+    font-size: 2.5em; /* Large title font size */
+    font-weight: 600; /* Bold title */
+    color: #2c3e50; /* Dark color for title */
+    text-align: center; /* Center the title */
+    margin-bottom: 20px; /* Space below the title */
+}
+
+h2 {
+    font-size: 1.75em; /* Subheading size */
+    margin-top: 20px; /* Margin on top for spacing */
+    color: #34495e; /* Darker color for subheadings */
+}
+
+/* Paragraphs */
+p {
+    font-size: 1.125em; /* Slightly larger font for readability */
+    margin-bottom: 15px; /* Space below paragraphs */
+    color: #555; /* Dark grey for paragraph text */
+}
+
+/* Lists */
+ul {
+    list-style-type: none; /* Remove default list styling */
+    padding: 0; /* Remove default padding */
+}
+
+li {
+    font-size: 1.125em; /* List item font size */
+    margin-bottom: 10px; /* Space between list items */
+    color: #555; /* Dark grey for list items */
+}
+
+/* Links */
+a {
+    color: #3498db; /* Link color */
+    text-decoration: none; /* Remove underline */
+}
+
+a:hover {
+    text-decoration: underline; /* Underline on hover for better UX */
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #1e1e1e; /* Dark background */
+    color: #e0e0e0; /* Light text color */
+}
+
+body.dark-mode h1,
+body.dark-mode h2 {
+    color: #f5f5f5; /* Light color for headings */
+}
+
+body.dark-mode p,
+body.dark-mode li {
+    color: #ddd; /* Lighter text color for paragraphs and list items */
+}
+
+body.dark-mode a {
+    color: #9b59b6; /* Different link color in dark mode */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px; /* Adjust padding for tablets */
+    }
+
+    h1 {
+        font-size: 2em; /* Smaller heading on tablets */
+    }
+
+    h2 {
+        font-size: 1.5em; /* Smaller subheading on tablets */
+    }
+
+    p,
+    li {
+        font-size: 1em; /* Adjust font size for paragraphs and list items */
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 10px; /* Adjust padding for mobile */
+    }
+
+    h1 {
+        font-size: 1.75em; /* Smaller heading on mobile */
+    }
+
+    h2 {
+        font-size: 1.25em; /* Smaller subheading on mobile */
+    }
+
+    p,
+    li {
+        font-size: 0.9em; /* Smaller font size for mobile */
+    }
+}

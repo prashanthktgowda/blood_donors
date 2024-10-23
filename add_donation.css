@@ -1,0 +1,96 @@
+/* Container styling */
+.container {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    text-align: center;
+}
+
+/* Premium input fields */
+input[type="text"], input[type="number"] {
+    width: 100%;
+    padding: 12px 15px;
+    margin: 10px 0;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: #ffffff;
+    transition: all 0.3s ease;
+}
+
+input[type="text"]:focus, input[type="number"]:focus {
+    border-color: #007aff; /* iOS blue */
+    box-shadow: 0 0 10px rgba(0, 122, 255, 0.2);
+}
+
+/* Button styling */
+.button {
+    width: 100%;
+    padding: 14px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #ffffff;
+    background-color: #007aff; /* iOS primary color */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #005bb5;
+}
+
+/* Success and error messages */
+.success-message {
+    color: #4caf50; /* Success green */
+    background-color: #e8f5e9;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.error-message {
+    color: #f44336; /* Error red */
+    background-color: #ffebee;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+    background-color: #1c1c1c;
+    color: #ffffff;
+}
+
+body.dark-mode .container {
+    background-color: #333333;
+}
+
+body.dark-mode input[type="text"], body.dark-mode input[type="number"] {
+    background-color: #444444;
+    color: #ffffff;
+    border-color: #555555;
+}
+
+body.dark-mode .button {
+    background-color: #007aff;
+}
+
+body.dark-mode .button:hover {
+    background-color: #005bb5;
+}
+
+body.dark-mode .success-message {
+    background-color: #2e7d32;
+    color: #ffffff;
+}
+
+body.dark-mode .error-message {
+    background-color: #ada454;
+    color: #ffffff;
+}

@@ -1,0 +1,30 @@
+runtime: php81  # Specifies the PHP runtime version
+env: standard
+
+env_variables:
+  DB_HOST: '/cloudsql/newlife-438207:asia-south1:bloodbank'  # Connection string to your Cloud SQL instance
+  DB_USER: 'root'  # Database username
+  DB_PASS: 'root'  # Database password
+  DB_NAME: 'database'  # Database name
+
+runtime_config:
+  document_root: .  # Set the document root
+  enable_stackdriver_integration: true
+
+beta_settings:
+  cloud_sql_instances: newlife-438207:asia-south1:bloodbank  # Connects to your Cloud SQL instance
+
+handlers:
+  # Serve static files like images, videos, CSS, JavaScript, HTML, and pickle files
+  - url: /(.+\.(gif|png|jpg|jpeg|css|js|mp4|html|pkl))$
+    static_files: \1
+    upload: .+\.(gif|png|jpg|jpeg|css|js|mp4|html|pkl)$
+
+  # Catch-all handler for dynamic PHP files
+  - url: /.*\.php
+    script: auto  # Automatically handles PHP scripts
+
+  # Catch-all handler for dynamic Python files
+  - url: /.*\.py
+    script: auto  # Automatically handles Python scripts
+

@@ -1,0 +1,98 @@
+/* General Reset for the main content */
+main * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Styling for the main section */
+main {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: #ffffff; /* White background for premium feel */
+    color: #333; /* Dark text color for readability */
+    line-height: 1.6; /* Improved line spacing */
+    max-width: 1200px; /* Max width for larger screens */
+    margin: 20px auto; /* Centering the main content */
+    padding: 20px; /* Padding around the content */
+    border-radius: 12px; /* Rounded corners for a modern look */
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for dark mode */
+}
+
+/* Headings */
+main h1 {
+    font-size: 2.5em; /* Large title font size */
+    font-weight: 600; /* Bold title */
+    color: #2c3e50; /* Dark blue color for title */
+    text-align: center; /* Center the title */
+    margin-bottom: 20px; /* Space below the title */
+}
+
+/* Lists */
+main ul {
+    list-style-type: none; /* Remove default list styling */
+    padding: 0; /* Remove default padding */
+}
+
+main li {
+    font-size: 1.125em; /* Slightly larger font for list items */
+    margin-bottom: 10px; /* Space between list items */
+    color: #555; /* Dark grey for list items */
+}
+
+/* Links */
+main a {
+    color: #3498db; /* Link color */
+    text-decoration: none; /* Remove underline */
+}
+
+main a:hover {
+    text-decoration: underline; /* Underline on hover for better UX */
+}
+
+/* Dark Mode */
+body.dark-mode main {
+    background-color: #1e1e1e; /* Dark background */
+    color: #e0e0e0; /* Light text color */
+}
+
+body.dark-mode main h1 {
+    color: #f5f5f5; /* Light heading color in dark mode */
+}
+
+body.dark-mode main li {
+    color: #ddd; /* Lighter list item color */
+}
+
+body.dark-mode main a {
+    color: #9b59b6; /* Different link color in dark mode */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    main {
+        padding: 15px; /* Adjust padding for tablets */
+    }
+
+    main h1 {
+        font-size: 2em; /* Smaller heading on tablets */
+    }
+
+    main li {
+        font-size: 1em; /* Adjust list item size for tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    main {
+        padding: 10px; /* Adjust padding for mobile */
+    }
+
+    main h1 {
+        font-size: 1.75em; /* Smaller heading on mobile */
+    }
+
+    main li {
+        font-size: 0.95em; /* Adjust list item size for mobile */
+    }
+}

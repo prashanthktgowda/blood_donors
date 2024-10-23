@@ -1,0 +1,113 @@
+/* Basic Reset */
+body {
+    margin: 0;
+    font-family: 'Helvetica Neue', 'Arial', sans-serif; /* iOS default font */
+    background-color: #F7F8FA; /* Light background for iOS */
+    color: #333; /* Default text color */
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+}
+
+/* Main Heading */
+h2 {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 26px; /* Increased font size for better visibility */
+    font-weight: 600; /* Semi-bold for better emphasis */
+}
+
+/* Donor Grid Styles */
+.donor-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); /* Responsive grid */
+    gap: 15px; /* Space between grid items */
+    padding: 10px;
+    margin-bottom: 20px; /* Space below the grid */
+}
+
+/* Donor Card Styles */
+.donor-card {
+    background: #FFFFFF; /* Card background */
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    padding: 15px;
+    transition: transform 0.2s, box-shadow 0.2s; /* Animation on hover */
+}
+
+.donor-card:hover {
+    transform: translateY(-5px); /* Slight lift effect on hover */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+/* Donor Info Styles */
+.donor-info {
+    text-align: center; /* Center text within the card */
+}
+
+.donor-info h2 {
+    font-size: 20px; /* Font size for donor name */
+    margin-bottom: 8px; /* Space below the name */
+}
+
+.blood-group {
+    font-weight: bold; /* Emphasize blood group */
+    color: #D9534F; /* Specific color for blood group */
+}
+
+/* Contact and Donation Info */
+.donor-info p {
+    margin: 5px 0; /* Space between paragraphs */
+    font-size: 14px; /* Standard font size for info */
+    line-height: 1.5; /* Improved readability */
+}
+
+/* Call Button Styles */
+.call-btn {
+    background-color: #007AFF; /* iOS Blue */
+    color: #FFFFFF; /* White text */
+    border: none;
+    border-radius: 8px; /* Rounded button */
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 16px; /* Larger font size */
+    margin-top: 10px; /* Space above button */
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transition */
+}
+
+.call-btn:hover {
+    background-color: #0056B3; /* Darker blue on hover */
+    transform: scale(1.05); /* Slight scale effect on hover */
+}
+
+/* Dark Mode Styles */
+.dark-mode {
+    background-color: #121212; /* Dark background */
+    color: #E0E0E0; /* Light text */
+}
+
+.dark-mode .donor-card {
+    background: #1E1E1E; /* Dark card background */
+    box-shadow: 0 2px 10px rgba(255, 255, 255, 0.1); /* Soft shadow */
+}
+
+.dark-mode .call-btn {
+    background-color: #3B82F6; /* Lighter blue for buttons */
+}
+
+.dark-mode .call-btn:hover {
+    background-color: #1E40AF; /* Darker hover effect */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+    .donor-grid {
+        grid-template-columns: 1fr; /* Single column for small screens */
+    }
+
+    h2 {
+        font-size: 22px; /* Slightly smaller heading */
+    }
+
+    .call-btn {
+        width: 100%; /* Full-width button on small screens */
+    }
+}

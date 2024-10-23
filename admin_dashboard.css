@@ -1,0 +1,114 @@
+/* General Styles */
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #f0f0f5; /* Light background for a modern feel */
+    margin: 0;
+    padding: 0;
+}
+
+/* Main container styling */
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Header styling */
+h1 {
+    color: #333333;
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #007aff; /* iOS primary color */
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+/* Profile details styling */
+ul {
+    list-style: none;
+    padding: 0;
+    text-align: left; /* Align text to the left for better readability */
+}
+
+li {
+    padding: 10px 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+li:last-child {
+    border-bottom: none; /* Remove border from last item */
+}
+
+strong {
+    color: #555555; /* Darker text for labels */
+}
+
+/* Edit Profile Button */
+ul a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 15px;
+    background-color: #007aff; /* iOS primary color */
+    color: #ffffff;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+ul a:hover {
+    background-color: #005bb5; /* Darker blue for hover effect */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        margin: 20px;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+}
+
+/* Dark mode styles */
+body.dark-mode {
+    background-color: #1c1c1c; /* Dark background for dark mode */
+    color: #ffffff; /* White text */
+}
+
+body.dark-mode .container {
+    background-color: #333333; /* Darker container for dark mode */
+}
+
+body.dark-mode h2 {
+    color: #007aff; /* Maintain iOS primary color */
+}
+
+body.dark-mode strong {
+    color: #ffffff; /* White text for labels in dark mode */
+}
+
+body.dark-mode ul {
+    border-color: #555555; /* Darker border in dark mode */
+}
+
+body.dark-mode ul a {
+    background-color: #007aff; /* Maintain iOS primary color */
+}
+
+body.dark-mode ul a:hover {
+    background-color: #005bb5; /* Maintain hover color */
+}

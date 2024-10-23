@@ -1,0 +1,170 @@
+/* General Styling for Edit Donor Details Page */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 700px;
+    margin: 60px auto 40px auto; /* Space between header and footer */
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+/* Heading Styling */
+.heading {
+    text-align: center;
+    font-size: 1.8rem;
+    color: #007aff; /* iOS-like blue color */
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+/* Form Group Styling */
+.form-group {
+    margin-bottom: 20px;
+}
+
+input[type="text"],
+input[type="password"],
+select {
+    width: 100%;
+    padding: 14px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    transition: border-color 0.3s ease;
+    outline: none;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+select:focus {
+    border-color: #007aff; /* iOS blue on focus */
+}
+
+select {
+    background-color: white;
+}
+
+/* Button Styling */
+.btn {
+    width: 100%;
+    padding: 15px;
+    background-color: #007aff;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #005bb5; /* Darker shade of iOS blue */
+}
+
+.btn:active {
+    transform: scale(0.98); /* iOS button interaction effect */
+}
+
+/* Error Message Styling */
+.error-message {
+    color: red;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Dark Mode Styling */
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+body.dark-mode .container {
+    background-color: #1e1e1e;
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .heading {
+    color: #50a4ff;
+}
+
+body.dark-mode input[type="text"],
+body.dark-mode input[type="password"],
+body.dark-mode select {
+    background-color: #2b2b2b;
+    color: #ffffff;
+    border: 1px solid #4a4a4a;
+}
+
+body.dark-mode input[type="text"]:focus,
+body.dark-mode input[type="password"]:focus,
+body.dark-mode select:focus {
+    border-color: #50a4ff;
+}
+
+body.dark-mode .btn {
+    background-color: #50a4ff;
+}
+
+body.dark-mode .btn:hover {
+    background-color: #1e7ad3;
+}
+
+/* iOS-Like Smooth Borders */
+input,
+btn,
+select {
+    -webkit-appearance: none; /* Removes default styling for iOS */
+    border-radius: 8px;
+}
+
+/* Responsive Layout for Small Screens */
+@media (max-width: 768px) {
+    .container {
+        margin: 20px;
+        padding: 15px;
+    }
+
+    .heading {
+        font-size: 1.5rem;
+    }
+
+    .btn {
+        padding: 12px;
+    }
+}
+
+/* Additional Address Inputs Styling */
+h4 {
+    color: #007aff;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+/* Specific Mobile Styling */
+@media (max-width: 480px) {
+    input[type="text"],
+    input[type="password"],
+    select {
+        font-size: 0.9rem;
+        padding: 12px;
+    }
+
+    .btn {
+        padding: 12px;
+        font-size: 0.9rem;
+    }
+
+    .heading {
+        font-size: 1.4rem;
+    }
+}

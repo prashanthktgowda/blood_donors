@@ -1,0 +1,107 @@
+/* General Reset for the main content */
+main * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Styling for the main section */
+main {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: #ffffff;
+    color: #333;
+    line-height: 1.6;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow for premium look */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Headings */
+main h1 {
+    font-size: 2.5em;
+    font-weight: 600;
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+main h2 {
+    font-size: 1.75em;
+    font-weight: 500;
+    color: #34495e;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+/* Paragraphs */
+main p {
+    font-size: 1.125em;
+    margin-bottom: 15px;
+    color: #555;
+    text-align: justify;
+}
+
+/* Links */
+main a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+main a:hover {
+    text-decoration: underline;
+}
+
+/* Dark Mode */
+body.dark-mode main {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+}
+
+body.dark-mode main h1, 
+body.dark-mode main h2 {
+    color: #f5f5f5;
+}
+
+body.dark-mode main a {
+    color: #9b59b6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    main {
+        padding: 15px;
+    }
+
+    main h1 {
+        font-size: 2em;
+    }
+
+    main h2 {
+        font-size: 1.5em;
+    }
+
+    main p {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    main {
+        padding: 10px;
+    }
+
+    main h1 {
+        font-size: 1.75em;
+    }
+
+    main h2 {
+        font-size: 1.25em;
+    }
+
+    main p {
+        font-size: 0.95em;
+    }
+}
