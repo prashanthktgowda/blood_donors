@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium iOS Header</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* General Reset for iOS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: #f4f4f4; /* Light mode background */
+            color: #333; /* Light mode text color */
+            transition: background-color 0.3s ease, color 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            -webkit-text-size-adjust: 100%; /* Prevent font scaling in landscape mode */
+        }
+
+        /* Premium iOS Header */
+        header {
+            background: linear-gradient(135deg, #00aaff, #005577); /* Premium gradient background */
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow for premium feel */
+            padding: 15px;
+            color: white;
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid #eee;
+            position: relative;
+            transition: background-color 0.3s ease;
+        }
+
+        header .header-container {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            align-items: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 24px;
+            flex-grow: 1;
+            text-align: center;
+            font-weight: 600;
+            color: white;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2); /* Subtle text shadow for a premium look */
+        }
+
+        header #dark-mode-toggle {
+            background-color: transparent;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            font-size: 20px;
+            color: white;
+            transition: color 0.3s ease, transform 0.2s ease;
+        }
+
+        header .admin-login {
+            background-color: transparent;
+            padding: 10px 15px;
+            border: 2px solid white;
+            border-radius: 20px;
+            color: white;
+            cursor: pointer;
+            text-decoration: none;
+            font-size: 16px;
+            transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+        }
+
+        header .admin-login:hover {
+            background-color: white;
+            color: #005577;
+            transform: translateY(-2px); /* Slight lift effect */
+        }
+
+        header .button-group {
+            display: flex;
+            gap: 15px;
+        }
+
+        /* Dark Mode Toggle */
+        body.dark-mode {
+            background-color: #121212;
+            color: #e0e0e0;
+        }
+
+        body.dark-mode header {
+            background-color: #1e1e1e;
+        }
+
+        body.dark-mode h1 {
+            color: whitesmoke;
+        }
+
+        body.dark-mode #dark-mode-toggle {
+            color: whitesmoke;
+        }
+
+        body.dark-mode .admin-login {
+            color: whitesmoke;
+            border-color: whitesmoke;
+        }
+
+        body.dark-mode .admin-login:hover {
+            background-color: whitesmoke;
+            color: #1e1e1e;
+        }
+
+        body.dark-mode #dark-mode-toggle .fa-sun {
+            display: none;
+        }
+
+        body.dark-mode #dark-mode-toggle .fa-moon {
+            display: inline;
+        }
+
+        body:not(.dark-mode) #dark-mode-toggle .fa-moon {
+            display: none;
+        }
+
+        body:not(.dark-mode) #dark-mode-toggle .fa-sun {
+            display: inline;
+        }
+
+        /* Loading Overlay */
+        #loadingOverlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, rgba(0, 255, 255, 0.3), rgba(0, 255, 255, 1), rgba(0, 255, 255, 0.3), rgba(1, 255, 255, 2));
+            background-size: 200% 100%;
+            animation: wave 2s linear infinite;
+            z-index: 9999;
+        }
+
+        @keyframes wave {
+            0% {
+                background-position: 0 0;
+            }
+            100% {
+                background-position: 200% 0;
+            }
+        }
+
+        /* Responsive Design for iOS */
+        @media screen and (max-width: 768px) {
+            header h1 {
+                font-size: 20px;
+            }
+
+            header .admin-login {
+                font-size: 60%;
+            }
+
+            header #dark-mode-toggle {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="header-container">
+        <button id="dark-mode-toggle" aria-label="Toggle Dark/Light Mode">
+            <i class="fas fa-sun" id="toggle-icon"></i> <!-- Default icon -->
+        </button>
+        <h1>NEW LIFE</h1>
+        <div class="button-group">
+            <a href="donation_history.php" class="admin-login">HISTORY</a>
+            <a href="add_donation.php" class="admin-login">ADD DONATION</a>
+            <a href="logout.php" class="admin-login">LOGOUT</a>
+        </div>
+    </div>
+    <div id="loadingOverlay"></div>
+</header>
+
+<script>
+    const toggleButton = document.getElementById('dark-mode-toggle');
+    const body = document.body;
+    const toggleIcon = document.getElementById('toggle-icon');
+    const loadingOverlay = document.getElementById('loadingOverlay');
+
+    // Simulate page loading
+    window.addEventListener('load', () => {
+        setTimeout(() => {
+            loadingOverlay.style.display = 'none';
+        }, 2000); // Hide after 2 seconds
+    });
+
+    toggleButton.addEventListener('click', () => {
+        body.classList.toggle('dark-mode');
+        if (body.classList.contains('dark-mode')) {
+            toggleIcon.classList.remove('fa-sun');
+            toggleIcon.classList.add('fa-moon');
+        } else {
+            toggleIcon.classList.remove('fa-moon');
+            toggleIcon.classList.add('fa-sun');
+        }
+    });
+</script>
+
+</body>
+</html>

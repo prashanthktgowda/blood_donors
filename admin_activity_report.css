@@ -1,0 +1,93 @@
+/* General Styles */
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #f0f0f5; /* Light background for modern feel */
+    margin: 0;
+    padding: 0;
+}
+
+/* Main container styling */
+.admin-activity-report-container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Heading styling */
+.admin-activity-report-heading {
+    color: #333333;
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+
+/* Table styling */
+.admin-activity-report-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.admin-activity-report-table th, 
+.admin-activity-report-table td {
+    padding: 12px;
+    border-bottom: 1px solid #e0e0e0;
+    text-align: left;
+}
+
+.admin-activity-report-table th {
+    background-color: #007aff; /* iOS primary color */
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.admin-activity-report-table tr:hover {
+    background-color: #f0f0f0; /* Light hover effect */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .admin-activity-report-container {
+        margin: 20px;
+        padding: 15px;
+    }
+
+    .admin-activity-report-heading {
+        font-size: 22px;
+    }
+
+    .admin-activity-report-table th, 
+    .admin-activity-report-table td {
+        padding: 10px;
+    }
+}
+
+/* Dark mode styles */
+body.dark-mode {
+    background-color: #1c1c1c; /* Dark background for dark mode */
+    color: #ffffff; /* White text */
+}
+
+body.dark-mode .admin-activity-report-container {
+    background-color: #333333; /* Darker container for dark mode */
+}
+
+body.dark-mode .admin-activity-report-heading {
+    color: #ffffff; /* White heading in dark mode */
+}
+
+body.dark-mode .admin-activity-report-table th {
+    background-color: #007aff; /* Maintain iOS primary color */
+}
+
+body.dark-mode .admin-activity-report-table tr:hover {
+    background-color: #444444; /* Darker hover effect in dark mode */
+}
+
+body.dark-mode .admin-activity-report-table th,
+body.dark-mode .admin-activity-report-table td {
+    border-color: #555555; /* Darker border in dark mode */
+}
