@@ -27,13 +27,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['send_query'])) {
         $mail->isSMTP();
         $mail->Host = 'smtp.gmail.com'; // Use your email service provider's SMTP server
         $mail->SMTPAuth = true;
-        $mail->Username = 'newlifeksv@gmail.com'; // Your Gmail or SMTP username
-        $mail->Password = 'pxuo fjyj dhib wtqj'; // Your Gmail or SMTP password
+        $mail->Username = 'your@gmail.com'; // Your Gmail or SMTP username
+        $mail->Password = 'password'; // Your Gmail or SMTP password
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
         $mail->Port = 587;
 
-        $mail->setFrom('no-reply@yourdomain.com', 'New Life');
-        $mail->addAddress('newlifeksv@gmail.com'); // Recipient's email
+        $mail->setFrom('no-reply@yourdomain.com', 'name');
+        $mail->addAddress('youremail.com'); // Recipient's email
 
         $mail->Subject = 'New Query from Donor';
         $mail->Body    = $mailContent;
