@@ -25,7 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['send_query'])) {
     $mail = new PHPMailer(true);
     try {
         $mail->isSMTP();
-        $mail->Host = 'smtp.gmail.com'; // Use your email service provider's SMTP server
+        $mail->Host = 'smtpname.gmail.com'; // Use your email service provider's SMTP server
         $mail->SMTPAuth = true;
         $mail->Username = 'your@gmail.com'; // Your Gmail or SMTP username
         $mail->Password = 'password'; // Your Gmail or SMTP password
