@@ -41,15 +41,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         try {
             // Server settings
             $mail->isSMTP();
-            $mail->Host = 'smtp.gmail.com'; // Use your email service provider's SMTP server
+            $mail->Host = 'YOURSMTP.gmail.com'; // Use your email service provider's SMTP server
             $mail->SMTPAuth = true;
-            $mail->Username = 'newlifeksv@gmail.com'; // Your Gmail or SMTP username
-            $mail->Password = 'pxuo fjyj dhib wtqj'; // Your Gmail or SMTP password
+            $mail->Username = 'example.com'; // Your Gmail or SMTP username
+            $mail->Password = 'password'; // Your Gmail or SMTP password
             $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
             $mail->Port = 587;
 
             // Email details
-            $mail->setFrom('no-reply@yourdomain.com', 'New Life Admin');
+            $mail->setFrom('no-reply@yourdomain.com', 'domainname');
             $mail->addAddress($email); // Add recipient email address
             $mail->Subject = "Admin Password Reset Request";
             $mail->isHTML(true);
