@@ -63,11 +63,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['register'])) {
                 // Send verification email
                 $mail = new PHPMailer(true);
                 try {
-                    $mail->isSMTP();
+                    $mail->isyoursmtpname();
                     $mail->Host = 'smtp.gmail.com';
                     $mail->SMTPAuth = true;
-                    $mail->Username = 'newlifeksv@gmail.com';
-                    $mail->Password = 'pxuo fjyj dhib wtqj';
+                    $mail->Username = 'example@gmail.com';
+                    $mail->Password = 'password';
                     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
                     $mail->Port = 587;
                     $mail->setFrom('no-reply@yourdomain.com', 'New Life');
