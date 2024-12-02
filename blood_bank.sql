@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 05, 2024 at 04:05 AM
+-- Generation Time: Dec 02, 2024 at 02:11 PM
 -- Server version: 8.0.37
 -- PHP Version: 8.2.12
 
@@ -26,7 +26,7 @@ SET time_zone = "+00:00";
 --
 -- Table structure for table `admin`
 --
-DROP TABLE IF EXISTS admin;
+
 CREATE TABLE `admin` (
   `id` int NOT NULL,
   `username` varchar(50) NOT NULL,
@@ -45,8 +45,19 @@ CREATE TABLE `admin` (
 --
 
 INSERT INTO `admin` (`id`, `username`, `email`, `mobile_number`, `reset_token`, `reset_expiry`, `email_verified`, `password`, `last_login`, `last_logout`) VALUES
-(4, 'Prashanth K T', 'prashanthktgowda123@gmail.com', '8762343212', '7be8cc67feee6c4f49b9e4a8f1c05dfe4f3d8c68fe12efeddfd6353720e1a4e2', '2024-10-04 23:19:00', 0, '$2y$10$q2yvb3qRJ4id7xy3YeJcX.2XXrdXQFVONnWZGJ0isEzCEHKZj3X32', NULL, '2024-10-03 12:14:39'),
+(4, 'Prashanth K T', 'prashanthktgowda123@gmail.com', '8762343212', NULL, NULL, 0, '$2y$10$LT/bHsQByyp394Yz64oPw.ETdZx/5X8GEiQgjoRhfAN2S9NHuAJnq', NULL, '2024-10-03 12:14:39'),
 (5, 'anirud1999', 'granthanaprashanth@gmail.com', '2345678922', NULL, NULL, 0, '$2y$10$5pXLrdBg2T6oT9g5a3uBNeJDvJsbPp8xp3wjsoOiIN1aJSe7PZubO', NULL, NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `admintb`
+--
+
+CREATE TABLE `admintb` (
+  `username` varchar(50) NOT NULL,
+  `password` varchar(30) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -76,7 +87,57 @@ INSERT INTO `admin_activity` (`id`, `admin_id`, `login_time`, `logout_time`, `ip
 (7, 4, '2024-10-04 14:17:06', NULL, '::1'),
 (8, 4, '2024-10-04 14:17:38', '2024-10-04 14:17:57', '::1'),
 (9, 4, '2024-10-04 14:57:52', '2024-10-04 14:58:15', '::1'),
-(10, 4, '2024-10-04 17:39:26', '2024-10-04 17:39:43', '::1');
+(10, 4, '2024-10-04 17:39:26', '2024-10-04 17:39:43', '::1'),
+(11, 4, '2024-12-02 13:20:09', '2024-12-02 13:21:13', '::1');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `appointmenttb`
+--
+
+CREATE TABLE `appointmenttb` (
+  `pid` int NOT NULL,
+  `ID` int NOT NULL,
+  `fname` varchar(20) NOT NULL,
+  `lname` varchar(20) NOT NULL,
+  `gender` varchar(10) NOT NULL,
+  `email` varchar(30) NOT NULL,
+  `contact` varchar(10) NOT NULL,
+  `doctor` varchar(30) NOT NULL,
+  `docFees` int NOT NULL,
+  `appdate` date NOT NULL,
+  `apptime` time NOT NULL,
+  `userStatus` int NOT NULL,
+  `doctorStatus` int NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `contact`
+--
+
+CREATE TABLE `contact` (
+  `name` varchar(30) NOT NULL,
+  `email` text NOT NULL,
+  `contact` varchar(10) NOT NULL,
+  `message` varchar(200) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `doctb`
+--
+
+CREATE TABLE `doctb` (
+  `username` varchar(50) NOT NULL,
+  `password` varchar(50) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `spec` varchar(50) NOT NULL,
+  `docFees` int NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -130,8 +191,44 @@ CREATE TABLE `donors` (
 --
 
 INSERT INTO `donors` (`id`, `name`, `email`, `password`, `mobile`, `blood_group`, `location`, `registered_at`, `reset_token`, `reset_expiry`, `photo`, `latitude`, `longitude`, `email_verified`, `account_frozen`) VALUES
-(31, 'Prashanth K T', 'prashanthktgowda123@gmail.com', '$2y$10$h5QaemUYeJ4x/nXy5286PuFnNS/8G5MpBWn/CVDuB35UWiPptmY0u', '8762431756', 'A+', 'K.S.V Nilaya, Vasanth nagar ,Bengaluru,Karnataka', '2024-09-19 12:09:21', NULL, NULL, NULL, 12.990399, 77.591469, 0, 1),
+(31, 'Prashanth K T', 'prashanthktgowda123@gmail.com', '$2y$10$h5QaemUYeJ4x/nXy5286PuFnNS/8G5MpBWn/CVDuB35UWiPptmY0u', '8762431756', 'A+', 'K.S.V Nilaya, Vasanth nagar ,Bengaluru,Karnataka', '2024-09-19 12:09:21', NULL, NULL, NULL, 12.990399, 77.591469, 0, 0),
 (39, 'Granthana', 'granthanaprashanth@gmail.com', '$2y$10$GHjhjj1dvKaqMq8ppM44Aue2Zlb7EG690aIIvezOYmPICkWiCc2N.', '8765432345', 'A+', 'near metrostation, main road, banashankari, bengaluru', '2024-10-04 13:05:49', NULL, NULL, NULL, 12.95319, 77.594624, 0, 0);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `patreg`
+--
+
+CREATE TABLE `patreg` (
+  `pid` int NOT NULL,
+  `fname` varchar(20) NOT NULL,
+  `lname` varchar(20) NOT NULL,
+  `gender` varchar(10) NOT NULL,
+  `email` varchar(30) NOT NULL,
+  `contact` varchar(10) NOT NULL,
+  `password` varchar(30) NOT NULL,
+  `cpassword` varchar(30) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `prestb`
+--
+
+CREATE TABLE `prestb` (
+  `doctor` varchar(50) NOT NULL,
+  `pid` int NOT NULL,
+  `ID` int NOT NULL,
+  `fname` varchar(50) NOT NULL,
+  `lname` varchar(50) NOT NULL,
+  `appdate` date NOT NULL,
+  `apptime` time NOT NULL,
+  `disease` varchar(250) NOT NULL,
+  `allergy` varchar(250) NOT NULL,
+  `prescription` varchar(1000) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -173,6 +270,12 @@ ALTER TABLE `admin_activity`
   ADD KEY `admin_id` (`admin_id`);
 
 --
+-- Indexes for table `appointmenttb`
+--
+ALTER TABLE `appointmenttb`
+  ADD PRIMARY KEY (`ID`);
+
+--
 -- Indexes for table `donation_history`
 --
 ALTER TABLE `donation_history`
@@ -185,6 +288,12 @@ ALTER TABLE `donation_history`
 ALTER TABLE `donors`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `email` (`email`);
+
+--
+-- Indexes for table `patreg`
+--
+ALTER TABLE `patreg`
+  ADD PRIMARY KEY (`pid`);
 
 --
 -- Indexes for table `temp_donors`
@@ -207,7 +316,13 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT for table `admin_activity`
 --
 ALTER TABLE `admin_activity`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+
+--
+-- AUTO_INCREMENT for table `appointmenttb`
+--
+ALTER TABLE `appointmenttb`
+  MODIFY `ID` int NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `donation_history`
@@ -220,6 +335,12 @@ ALTER TABLE `donation_history`
 --
 ALTER TABLE `donors`
   MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
+
+--
+-- AUTO_INCREMENT for table `patreg`
+--
+ALTER TABLE `patreg`
+  MODIFY `pid` int NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `temp_donors`
