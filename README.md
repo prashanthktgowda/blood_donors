@@ -1,3 +1,54 @@
+Blood Donor Search Web Portal
+The Blood Donor Search Web Portal is an interactive and efficient platform designed to simplify the process of connecting blood donors with those in need. It addresses key challenges such as locating suitable donors within a particular location or radius while ensuring the system is secure, user-friendly, and reliable.
+
+Key Features of the Project:
+Search for Donors:
+
+Users can search for voluntary donors within a specific location and a defined radius.
+Implemented address prediction and nearest donor search using Machine Learning algorithms like:
+Linear Regression: To predict addresses based on user input.
+K-Nearest Neighbors (KNN): For identifying the nearest available donors.
+Donor Registration:
+
+Voluntary donors can register on the platform by providing personal details and their willingness to donate blood.
+Integrated PHP Mailer to send an OTP during registration for verification.
+Password Reset Functionality:
+
+Users can reset their password via a password reset link sent to their email.
+Account Freezing Option:
+
+Donors can temporarily freeze their account, making them unavailable for searches during specific periods.
+Donation Eligibility Check:
+
+Ensures donors are eligible to donate only after 72 days from their last donation, adhering to medical guidelines.
+Admin Management Panel:
+
+The admin has full control over managing donor accounts, reviewing donor details, and ensuring compliance with platform rules.
+Technologies Used:
+Frontend:
+
+HTML: For structuring the web pages.
+CSS: For styling and creating a responsive and visually appealing design.
+Backend:
+
+PHP:
+Core programming language for handling user requests, authentication, and server-side logic.
+Integrated PHP Mailer for sending OTPs and password reset emails.
+Database:
+
+SQL:
+For storing and managing user information, donor details, and donation records.
+Ensures data integrity and supports efficient querying for search operations.
+Machine Learning:
+
+Linear Regression: Used for address prediction during user queries.
+K-Nearest Neighbors (KNN): Employed to find the nearest donors based on location and distance.
+Challenges Addressed:
+Efficient donor search within a given radius.
+Ensuring data security through OTP verification and secure password reset mechanisms.
+Managing donor eligibility to prevent premature donations.
+Streamlining admin operations for effective donor management.
+
 # blood_bank_mobile
 donor search engine
 
